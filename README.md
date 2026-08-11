@@ -31,10 +31,13 @@ A secure, production-ready Retrieval-Augmented Generation (RAG) and Model Contex
 enterprise-rag-mcp-pipeline/
 │
 ├── rag-agent/
-│   └── client.py          # Multi-turn interactive chat agent and Bedrock handler
+│   ├── client.py          # Multi-turn interactive chat agent and Bedrock handler
+│   └── enable_model.py    # Automated AWS Bedrock model use case & agreement setup script
 ├── mcp-server/
 │   └── server.py          # FastMCP server handling secure S3 document retrieval
 ├── infra/                 # Infrastructure as Code configurations
+│   ├── main.tf            # Terraform configurations for S3 and IAM roles
+│   └── provider.tf        # Terraform provider and backend definitions
 ├── diagnosis/             # Validation screenshots and execution traces
 │   ├── Bedrock.png
 │   ├── image_d7f914.png
