@@ -2,6 +2,11 @@
 
 A secure, production-ready Retrieval-Augmented Generation (RAG) and Model Context Protocol (MCP) pipeline designed for automated technical troubleshooting. This project integrates **Amazon Bedrock (Nova Lite)** for scalable AI reasoning, **FastMCP** for secure tool orchestration, and an **Amazon S3** enterprise repository for ground-truth technical documentation storage.  
 
+## High-Level Architecture
+
+The microservice leverages a completely serverless infrastructure pattern:
+
+![Architecture Design](diagnostics/architecture-design.jpg)
 
 ## 🏛️ Architecture & Component Flow
 
