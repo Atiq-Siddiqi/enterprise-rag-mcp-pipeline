@@ -4,8 +4,6 @@ A secure, production-ready Retrieval-Augmented Generation (RAG) and Model Contex
 
 ## High-Level Architecture
 
-The microservice leverages a completely serverless infrastructure pattern:
-
 ![Architecture Design](diagnostics/architecture-design.jpg)
 
 ## 🏛️ Architecture & Component Flow
@@ -43,7 +41,7 @@ enterprise-rag-mcp-pipeline/
 ├── infra/                 # Infrastructure as Code configurations
 │   ├── main.tf            # Terraform configurations for S3 and IAM roles
 │   └── provider.tf        # Terraform provider and backend definitions
-├── diagnosis/             # Validation screenshots and execution traces
+├── diagnostics/           # Validation screenshots and execution traces
 │   ├── Bedrock.png
 │   ├── image_d7f914.png
 │   └── image_d7f915.png
@@ -129,16 +127,16 @@ The pipeline has been thoroughly tested and validated against real-world trouble
 
 ### 🖥️ Bedrock Playground Execution
 Below is the validation screenshot captured from the ***Amazon Bedrock Playground***, demonstrating ***Amazon Nova Lite*** successfully orchestrating tool requests, fetching documentation, and synthesizing actionable technical solutions:
-![Bedrock](diagnosis/Bedrock.png)
+![Bedrock](diagnostics/Bedrock.png)
 
 ### 📋 Runtime Evidence & Traces
 Runtime evidence and tool-invocation validations are below:
 
 * **FastMCP Server Initialization & Handshake:** Captures the initial FastMCP server connection handshake and payload initialization between the client agent and local runtime.
-![FastMCP](diagnosis/image_d7f914.png)
+![FastMCP](diagnostics/image_d7f914.png)
 
 * **S3 Retrieval & Multi-Turn Context Synthesis:** Illustrates successful live S3 document retrieval and multi-turn context synthesis returned during a simulated incident response session.
-![S3](diagnosis/image_d7f914.png)
+![S3](diagnostics/image_d7f914.png)
 
 
 ## 🚀 Key Features & Engineering Highlights
